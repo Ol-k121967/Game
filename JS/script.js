@@ -67,54 +67,48 @@ document.getElementById('btnRetry').addEventListener('click', function ()
       default:
         answerNumberText = "девять LR"
     } 
-    console.log(answerNumber);
-    console.log(answerText);
-    console.log(answerNumberText);
     switch (answerText)
    {
         case 0:
-        if (answerNumber >=0) {
-          if (answerNumber <=9) {
-            answerField.innerText = 'Вы загадали число ' + answerNumberText + "?"; 
+           if (answerNumber >= 0 && answerNumber <=9 )  {
+            answerField.innerText = 'Вы загадали число ' + answerNumberText + "?";
             gameRun = true;
             break;
           }
-        }  else {  
+         else {  
         answerField.innerText = `Вы загадали число ${answerNumber }?`;
         gameRun = true;
           break;
         }
               case 1:
-          if (answerNumber >=0) {
-            if (answerNumber <=9) {
-              answerField.innerText = 'Надеюсь это число ' + answerNumberText + '?'; 
+          if (answerNumber >= 0 && answerNumber <=9 )  {
+              answerField.innerText = 'Надеюсь это число ' + answerNumberText + '?' ;
               gameRun = true;
               break;
             }
-          }  else { 
-            answerField.innerText = `Надеюсь это число ${answerNumber }?`
-            gameRun = true;
+           else { 
+            answerField.innerText = `Надеюсь это число ${answerNumber }?`;
+            gameRun = true; 
             break;
+           
           }
         case 2:
-          if (answerNumber >=0) {
-            if (answerNumber <=9) {
-              answerField.innerText = 'Неужели это ' + answerNumberText + '?'; 
+          if (answerNumber >= 0 && answerNumber <=9 ) {
+              answerField.innerText = 'Неужели это ' + answerNumberText + '?';
               gameRun = true;
               break;
             }
-          }  else { 
+            else { 
             answerField.innerText = `Неужели это ${answerNumber }?`;
             gameRun = true;
             break;
           }
        default:
-        if (answerNumber >=0) {
-          if (answerNumber <=9) {
+        if (answerNumber >= 0 && answerNumber <=9 ) 
+        {
             answerField.innerText = 'Как насчет ' + answerNumberText +'?'; 
             gameRun = true;
             break;
-          }
         }  else { 
           answerField.innerText = `Как насчет ${answerNumber }?`;
           gameRun = true;
@@ -122,10 +116,7 @@ document.getElementById('btnRetry').addEventListener('click', function ()
         }
     }
 
-}
-//console.log(answerNumber);
-//console.log(answerText);
-//console.log(answerNumberText);
+})
 
 document.getElementById('btnOver').addEventListener('click', function () {
     if (gameRun)
@@ -146,22 +137,93 @@ document.getElementById('btnOver').addEventListener('click', function () {
             orderNumber++;
             orderNumberField.innerText = orderNumber;
             answerText = Math.round(Math.random() * 3);
-            switch (answerText) {
+
+            switch (answerNumber)  {
+              case 0:
+                answerNumberText = "ноль"
+                break;
+              case 1:
+                answerNumberText = "один"
+                break;
+              case 2:
+                  answerNumberText = "два"
+                  break;
+              case 3:
+                  answerNumberText = "три"
+                  break;
+              case 4:
+                  answerNumberText = "четыре"
+                  break;
+              case 5:
+                  answerNumberText = "пять"
+                  break;
+              case 6:
+                  answerNumberText = "шесть"
+                  break;
+              case 7:
+                  answerNumberText = "семь"
+                  break;
+              case 8:
+                  answerNumberText = "восемь"
+                  break;
+              case 9:
+                  answerNumberText = "девять"
+                  break;
+              default:
+                answerNumberText = "девять LR"
+            } 
+            switch (answerText)
+           {
                 case 0:
-                    answerField.innerText = `Вы загадали число ${answerNumber }?`
+                   if (answerNumber >= 0 && answerNumber <=9 )  {
+                    answerField.innerText = 'Вы загадали число ' + answerNumberText + "?";
                     gameRun = true;
-                  break;
-                case 1:
-                    answerField.innerText = `Надеюсь это число ${answerNumber }?`
-                    gameRun = true;
-                  break;
-                case 2:
-                    answerField.innerText = `Неужели это ${answerNumber }?`
-                    gameRun = true;
-               default:
-                answerField.innerText = `Как насчет ${answerNumber }?`
+                    break;
+                  }
+                 else {  
+                answerField.innerText = `Вы загадали число ${answerNumber }?`;
                 gameRun = true;
-              }
+                  break;
+                }
+                      case 1:
+                  if (answerNumber >= 0 && answerNumber <=9 )  {
+                      answerField.innerText = 'Надеюсь это число ' + answerNumberText + '?' ;
+                      gameRun = true;
+                      break;
+                    }
+                   else { 
+                    answerField.innerText = `Надеюсь это число ${answerNumber }?`;
+                    gameRun = true; 
+                    break;
+                   
+                  }
+                case 2:
+                  if (answerNumber >= 0 && answerNumber <=9 ) {
+                      answerField.innerText = 'Неужели это ' + answerNumberText + '?';
+                      gameRun = true;
+                      break;
+                    }
+                    else { 
+                    answerField.innerText = `Неужели это ${answerNumber }?`;
+                    gameRun = true;
+                    break;
+                  }
+               default:
+                if (answerNumber >= 0 && answerNumber <=9 ) 
+                {
+                    answerField.innerText = 'Как насчет ' + answerNumberText +'?'; 
+                    gameRun = true;
+                    break;
+                }  else { 
+                  answerField.innerText = `Как насчет ${answerNumber }?`;
+                  gameRun = true;
+                  break;
+                }
+            }
+            
+          
+//          
+      
         }
     }
 })
@@ -181,22 +243,88 @@ document.getElementById('btnLess').addEventListener('click', function () {
             orderNumber++;
             orderNumberField.innerText = orderNumber;
            answerText = Math.round(Math.random() * 3);
-            switch (answerText) {
-                case 0:
-                    answerField.innerText = `Вы загадали число ${answerNumber }?`
-                    gameRun = true;
+           switch (answerNumber)  {
+            case 0:
+              answerNumberText = "ноль"
+              break;
+            case 1:
+              answerNumberText = "один"
+              break;
+            case 2:
+                answerNumberText = "два"
+                break;
+            case 3:
+                answerNumberText = "три"
+                break;
+            case 4:
+                answerNumberText = "четыре"
+                break;
+            case 5:
+                answerNumberText = "пять"
+                break;
+            case 6:
+                answerNumberText = "шесть"
+                break;
+            case 7:
+                answerNumberText = "семь"
+                break;
+            case 8:
+                answerNumberText = "восемь"
+                break;
+            case 9:
+                answerNumberText = "девять"
+                break;
+            default:
+              answerNumberText = "девять LR"
+          } 
+          switch (answerText)
+         {
+              case 0:
+                 if (answerNumber >= 0 && answerNumber <=9 )  {
+                  answerField.innerText = 'Вы загадали число ' + answerNumberText + "?";
+                  gameRun = true;
                   break;
-                case 1:
-                    answerField.innerText = `Надеюсь это число ${answerNumber }?`
-                    gameRun = true;
-                  break;
-                case 2:
-                    answerField.innerText = `Неужели это ${answerNumber }?`
-                    gameRun = true;
-               default:
-                answerField.innerText = `Как насчет ${answerNumber }?`
-                gameRun = true;
+                }
+               else {  
+              answerField.innerText = `Вы загадали число ${answerNumber }?`;
+              gameRun = true;
+                break;
               }
+                    case 1:
+                if (answerNumber >= 0 && answerNumber <=9 )  {
+                    answerField.innerText = 'Надеюсь это число ' + answerNumberText + '?' ;
+                    gameRun = true;
+                    break;
+                  }
+                 else { 
+                  answerField.innerText = `Надеюсь это число ${answerNumber }?`;
+                  gameRun = true; 
+                  break;
+                 
+                }
+              case 2:
+                if (answerNumber >= 0 && answerNumber <=9 ) {
+                    answerField.innerText = 'Неужели это ' + answerNumberText + '?';
+                    gameRun = true;
+                    break;
+                  }
+                  else { 
+                  answerField.innerText = `Неужели это ${answerNumber }?`;
+                  gameRun = true;
+                  break;
+                }
+             default:
+              if (answerNumber >= 0 && answerNumber <=9 ) 
+              {
+                  answerField.innerText = 'Как насчет ' + answerNumberText +'?'; 
+                  gameRun = true;
+                  break;
+              }  else { 
+                answerField.innerText = `Как насчет ${answerNumber }?`;
+                gameRun = true;
+                break;
+              }
+          }
         }
     }
 })
