@@ -2,3 +2,51 @@
     height: 100vh;
     font-family: 'Open Sans', monospace;
 }
+
+.m-0 {
+    background-color:violet ;
+    text-decoration: underline;
+}
+
+.card-header {
+    background-color:aqua ;
+}
+
+.card-body {
+    background-color:beige ;
+}
+
+.btn-outline-primary {
+    background-color:aqua ;
+}
+
+div .card-body {
+    border-width: 3px;
+    border-style: double;
+    border-color: black;
+  }
+
+
+div .text-center {
+    border-width: 3px;
+    border-style:groove ;
+    border-color: black;
+    background-color:greenyellow ;
+  }
+div .btn {
+    border-width: 2px;
+    border-style:double ;
+    border-color: black;
+  }
+
+
+ .btn-link {
+    background-color:aqua ;
+}
+
+
+
+h3.card-title.m-0 {
+    background-color:mediumspringgreen ;
+}
+

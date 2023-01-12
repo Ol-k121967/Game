@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 let minValue = parseInt(prompt('Минимальное значение числа для игры','0'));
 let maxValue = parseInt(prompt('Максимальное значение числа для игры','100'));
 minValue = (minValue || -999 || !isNaN(minValue));
